@@ -1,8 +1,7 @@
 import React from "react";
 import Searchbar from "./Searchbar";
 import SearchResults from "./SearchResults/SearchResults";
-
-
+import "./App.css"
 
 function App() {
     const results = {

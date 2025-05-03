@@ -1,0 +1,10 @@
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: row;
+}
