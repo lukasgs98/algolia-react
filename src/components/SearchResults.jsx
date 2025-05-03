@@ -12,7 +12,8 @@ function SearchResults(props) {
             <Card 
             name={hit.name}
             photo={hit.image_url}
-            reviews={hit.reviews_count}
+            numberStars={hit.stars_count}
+            numberReviews={hit.reviews_count}
             cuisine={hit.food_type}
             area={hit.area}
             priceRange={hit.price_range}
@@ -31,4 +32,4 @@ function SearchResults(props) {
     );
 }
 
-export default SearchResults
+export default SearchResults;
