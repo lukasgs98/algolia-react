@@ -8,6 +8,10 @@
     gap: 5px;
 }
 
+.payment-options-filter-title {
+    font-weight: bold;
+}
+
 .payment-options-filter-list {
     margin: 0px 0px 0px 10px;
 }

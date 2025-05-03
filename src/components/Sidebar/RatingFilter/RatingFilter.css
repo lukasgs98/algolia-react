@@ -8,6 +8,10 @@
     gap: 5px;
 }
 
+.rating-filter-title {
+    font-weight: bold;
+}
+
 .rating-filter-list {
     margin: 0px 0px 0px 10px;
 }
