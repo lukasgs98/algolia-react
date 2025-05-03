@@ -1,6 +1,6 @@
 import React from "react";
 import Searchbar from "./Searchbar";
-import SearchMetaData from "./SearchMetaData";
+
 
 function App() {
     return (
@@ -9,9 +9,7 @@ function App() {
                 <Searchbar placeholder="Simple searchbar"/>
             </div>
             <div class="middle-container">
-                <SearchMetaData numberHits="4900" searchSpeed="0.05"/>
-                ...
-                ...
+
             </div>
         </>
     )
