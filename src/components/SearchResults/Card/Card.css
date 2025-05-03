@@ -1,0 +1,12 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.restaurant-reviews,
+.restaurant-description {
+    display: flex;
+    flex: row;
+    gap: 5px;
+}

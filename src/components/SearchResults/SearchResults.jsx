@@ -2,6 +2,7 @@ import React from "react";
 import SearchMetaData from "./SearchMetaData/SearchMetaData";
 import Card from "./Card/Card";
 import ShowMoreButton from "./ShowMoreButton/ShowMoreButton";
+import "./SearchResults.css"
 
 function SearchResults(props) {
     // SEPARATE SEARCH METADATA AND HITS //
@@ -24,7 +25,7 @@ function SearchResults(props) {
     };
     
     return (
-        <>
+        <div class="search-results">
             {/* RENDER SEARCH META DATA */}
             <SearchMetaData 
                 numberHits={metadata.numberOfHits} 
@@ -33,7 +34,7 @@ function SearchResults(props) {
 
             {/* LOOP THROUGH HITS TO CREATE CARDS */}
             {hits.map(createCard)}
-        </>
+        </div>
     );
 }
 

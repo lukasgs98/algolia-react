@@ -1,8 +1,9 @@
 import React from "react";
+import "./Card.css"
 
 function Card(props) {
     return (
-        <>
+        <div class="card">
             <div class="restaurant-photo">
                 <img alt={props.name} src={props.photo}/>
             </div>
@@ -13,12 +14,12 @@ function Card(props) {
                     <span class="restaurant-reviews-number-reviews">({props.numberReviews})</span>
                 </div>
                 <div class="restaurant-description">
-                    <span>{props.cuisine}</span> | 
-                    <span>{props.area}</span> | 
+                    <span>{props.cuisine}</span> 
+                    <span>{props.area}</span>
                     <span>{props.priceRange}</span>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
