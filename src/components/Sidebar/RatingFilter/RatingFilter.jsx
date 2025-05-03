@@ -6,12 +6,12 @@ function RatingFilter() {
         <div class="rating-filter">
             <div class="cuisine-filter-title">Rating</div>
             <div class="rating-filter-list">
-                <img id="zero" alt="☆☆☆☆☆"/>
-                <img id="one" alt="★☆☆☆☆"/>
-                <img id="two" alt="★★☆☆☆"/>
-                <img id="three" alt="★★★☆☆"/>
-                <img id="four" alt="★★★★☆"/>
-                <img id="five" alt="★★★★★"/>
+                <img id="zero" alt="☆☆☆☆☆" src="/assets/rating_0_of_5.svg"/>
+                <img id="one" alt="★☆☆☆☆" src="/assets/rating_1_of_5.svg"/>
+                <img id="two" alt="★★☆☆☆" src="/assets/rating_2_of_5.svg"/>
+                <img id="three" alt="★★★☆☆" src="/assets/rating_3_of_5.svg"/>
+                <img id="four" alt="★★★★☆" src="/assets/rating_4_of_5.svg"/>
+                <img id="five" alt="★★★★★" src="/assets/rating_5_of_5.svg"/>
             </div>
         </div>
     );
