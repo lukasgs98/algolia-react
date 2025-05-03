@@ -68,7 +68,7 @@ function App() {
     return (
         <>
             <div class="top-container">
-                <Searchbar placeholder="Simple searchbar"/>
+                <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
             </div>
             <div class="middle-container">
                 <Sidebar />
