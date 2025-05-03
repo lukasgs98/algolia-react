@@ -10,6 +10,6 @@ function CuisineFilter() {
             </ul>
         </div>
     );
-}
+};
 
 export default CuisineFilter;
