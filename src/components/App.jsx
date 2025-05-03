@@ -1,6 +1,6 @@
 import React from "react";
 import Searchbar from "./Searchbar";
-import SearchResults from "./SearchResults";
+import SearchResults from "./SearchResults/SearchResults";
 
 
 

@@ -1,12 +1,14 @@
 import React from "react";
-import SearchMetaData from "./SearchMetaData";
-import Card from "./Card";
-import ShowMoreButton from "./ShowMoreButton";
+import SearchMetaData from "./SearchMetaData/SearchMetaData";
+import Card from "./Card/Card";
+import ShowMoreButton from "./ShowMoreButton/ShowMoreButton";
 
 function SearchResults(props) {
+    // SEPARATE SEARCH METADATA AND HITS //
     const metadata = props.results.metadata;
     const hits = props.results.hits;
     
+    // CREATE FUNCTION TO RENDER CARDS //
     function createCard(hit) {
         return (
             <Card 
@@ -23,10 +25,13 @@ function SearchResults(props) {
     
     return (
         <>
+            {/* RENDER SEARCH META DATA */}
             <SearchMetaData 
                 numberHits={metadata.numberOfHits} 
                 searchSpeed={metadata.searchTimeSeconds}
             />
+
+            {/* LOOP THROUGH HITS TO CREATE CARDS */}
             {hits.map(createCard)}
         </>
     );
