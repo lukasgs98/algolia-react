@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: "Open Sans", sans-serif;
-    background: url("/background.png");
+    background: url("/assets/background.png");
     background-color: #dddddd;
 }
 
