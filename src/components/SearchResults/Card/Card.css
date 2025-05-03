@@ -10,3 +10,13 @@
     flex: row;
     gap: 5px;
 }
+
+.restaurant-description-cuisine,
+.restaurant-description-area {
+    padding-right: 4px;
+    border-right: solid 1px #b3b3b3;
+}
+
+span {
+    color: #b3b3b3;
+}

@@ -11,12 +11,12 @@ function Card(props) {
                 <div class="restaurant-name">{props.name}</div>
                 <div class="restaurant-reviews">
                     <span class="restaurant-reviews-number-stars">{props.numberStars}</span>
-                    <span class="restaurant-reviews-number-reviews">({props.numberReviews})</span>
+                    <span class="restaurant-reviews-number-reviews">({props.numberReviews}) reviews</span>
                 </div>
                 <div class="restaurant-description">
-                    <span>{props.cuisine}</span> 
-                    <span>{props.area}</span>
-                    <span>{props.priceRange}</span>
+                    <span class="restaurant-description-cuisine">{props.cuisine}</span> 
+                    <span class="restaurant-description-area">{props.area}</span>
+                    <span class="restaurant-description-priceRange">{props.priceRange}</span>
                 </div>
             </div>
         </div>
