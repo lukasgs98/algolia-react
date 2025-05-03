@@ -11,12 +11,24 @@
     gap: 5px;
 }
 
+.restaurant-reviews-number-stars,
+.restaurant-reviews-number-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-reviews-stars-img {
+    padding-top: 5px;
+}
+
 .restaurant-description-cuisine,
 .restaurant-description-area {
     padding-right: 4px;
     border-right: solid 1px #b3b3b3;
 }
 
-span {
+.restaurant-reviews span,
+.restaurant-description span {
     color: #b3b3b3;
 }

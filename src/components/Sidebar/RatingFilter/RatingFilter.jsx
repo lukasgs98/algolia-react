@@ -13,12 +13,12 @@ function RatingFilter() {
         <div class="rating-filter">
             <div class="cuisine-filter-title">Rating</div>
             <div class="rating-filter-list">
-                <img id="zero" alt="☆☆☆☆☆" src={zero_stars}/>
-                <img id="one" alt="★☆☆☆☆" src={one_star}/>
-                <img id="two" alt="★★☆☆☆" src={two_stars}/>
-                <img id="three" alt="★★★☆☆" src={three_stars}/>
-                <img id="four" alt="★★★★☆" src={four_stars}/>
-                <img id="five" alt="★★★★★" src={five_stars}/>
+                <img id="zero" alt="0/5 stars" src={zero_stars}/>
+                <img id="one" alt="1/5 stars" src={one_star}/>
+                <img id="two" alt="2/5 stars" src={two_stars}/>
+                <img id="three" alt="3/5 stars" src={three_stars}/>
+                <img id="four" alt="4/5 stars" src={four_stars}/>
+                <img id="five" alt="5/5 stars" src={five_stars}/>
             </div>
         </div>
     );
