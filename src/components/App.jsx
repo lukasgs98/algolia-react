@@ -1,5 +1,5 @@
 import React from "react";
-import Searchbar from "./Searchbar";
+import Searchbar from "./Searchbar/Searchbar";
 import Sidebar from "./Sidebar/Sidebar";
 import SearchResults from "./SearchResults/SearchResults";
 import "./App.css"
