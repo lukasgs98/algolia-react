@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "algoliasearch": "^5.24.0",
+    "algoliasearch-helper": "^3.25.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
