@@ -1,5 +1,6 @@
 import React from "react";
 import Searchbar from "./Searchbar";
+import Sidebar from "./Sidebar/Sidebar";
 import SearchResults from "./SearchResults/SearchResults";
 import "./App.css"
 
@@ -70,7 +71,8 @@ function App() {
                 <Searchbar placeholder="Simple searchbar"/>
             </div>
             <div class="middle-container">
-                <SearchResults results={results}/>
+                <Sidebar />
+                <SearchResults results={results} />
             </div>
         </>
     )
