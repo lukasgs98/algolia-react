@@ -1,0 +1,13 @@
+.rating-filter,
+.rating-filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-filter {
+    gap: 5px;
+}
+
+.rating-filter-list {
+    margin: 0px 0px 0px 10px;
+}

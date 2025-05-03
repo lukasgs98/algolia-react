@@ -2,6 +2,7 @@ import React from "react";
 import CuisineFilter from "./CuisineFilter/CuisineFilter";
 import RatingFilter from "./RatingFilter/RatingFilter";
 import PaymentOptionsFilter from "./PaymentOptionsFilter/PaymentOptionsFilter";
+import "./Sidebar.css";
 
 function Sidebar() {
     return (

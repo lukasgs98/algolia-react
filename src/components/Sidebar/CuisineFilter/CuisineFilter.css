@@ -1,0 +1,19 @@
+.cuisine-filter, 
+.cuisine-filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuisine-filter {
+    gap: 5px;
+}
+
+.cuisine-filter-list {
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+

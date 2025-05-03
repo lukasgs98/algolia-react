@@ -1,0 +1,13 @@
+.payment-options-filter,
+.payment-options-filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-options-filter {
+    gap: 5px;
+}
+
+.payment-options-filter-list {
+    margin: 0px 0px 0px 10px;
+}
