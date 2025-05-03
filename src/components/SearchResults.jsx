@@ -3,23 +3,32 @@ import SearchMetaData from "./SearchMetaData";
 import Card from "./Card";
 import ShowMoreButton from "./ShowMoreButton";
 
-function SearchResults({results}) {
+function SearchResults(props) {
+    const metadata = props.results.metadata;
+    const hits = props.results.hits;
+    
+    function createCard(hit) {
+        return (
+            <Card 
+            name={hit.name}
+            photo={hit.image_url}
+            reviews={hit.reviews_count}
+            cuisine={hit.food_type}
+            area={hit.area}
+            priceRange={hit.price_range}
+        />
+        )
+    };
+    
     return (
         <>
             <SearchMetaData 
-                numberHits={results.metadata.numberOfHits} 
-                searchSpeed={results.metadata.searchTimeSeconds}
+                numberHits={metadata.numberOfHits} 
+                searchSpeed={metadata.searchTimeSeconds}
             />
-            <Card 
-                name="Restaurant name"
-                photo="Photo of restaurant"
-                reviews="Number of reviews"
-                cuisine="Type of cuisine"
-                area="Area"
-                priceRange="Price range"
-            />
+            {hits.map(createCard)}
         </>
-    )
+    );
 }
 
 export default SearchResults

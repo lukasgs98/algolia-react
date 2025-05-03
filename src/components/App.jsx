@@ -11,21 +11,57 @@ function App() {
           "numberOfHits": 3,
           "searchTimeSeconds": 0.45
         },
-        "results": [
-          {
-            "name": "Pasta Palace",
-            "address": "123 Main St, Springfield",
-            "rating": 4.5,
-            "distanceMiles": 0.3,
-            "cuisine": "Italian"
-          },
-          {
-            "name": "Curry Corner",
-            "address": "456 Elm St, Springfield",
-            "rating": 4.7,
-            "distanceMiles": 0.5,
-            "cuisine": "Indian"
-          }
+        "hits": [
+            {
+              name: 'The Edgewater Grill',
+              address: '861 West Harbor Dr',
+              area: 'San Diego',
+              city: 'San Diego',
+              country: 'US',
+              image_url: 'https://www.opentable.com/img/restimages/99943.jpg',
+              mobile_reserve_url: 'http://mobile.opentable.com/opentable/?restId=99943',
+              payment_options: [Array],
+              phone: '6192327581',
+              postal_code: '92101',
+              price: 2,
+              reserve_url: 'http://www.opentable.com/single.aspx?rid=99943',
+              state: 'CA',
+              _geoloc: [Object],
+              food_type: 'American',
+              stars_count: '3.9',
+              reviews_count: '186',
+              neighborhood: 'Downtown / Gaslamp',
+              phone_number: '(619) 232-7581',
+              price_range: '$30 and under',
+              dining_style: 'Casual Dining',
+              objectID: '99943',
+              _highlightResult: [Object]
+            },
+            {
+              name: 'Harbor House',
+              address: '831 W Harbor Dr',
+              area: 'San Diego',
+              city: 'San Diego',
+              country: 'US',
+              image_url: 'https://www.opentable.com/img/restimages/99940.jpg',
+              mobile_reserve_url: 'http://mobile.opentable.com/opentable/?restId=99940',
+              payment_options: [Array],
+              phone: '6192321141x',
+              postal_code: '92101',
+              price: 2,
+              reserve_url: 'http://www.opentable.com/single.aspx?rid=99940',
+              state: 'CA',
+              _geoloc: [Object],
+              food_type: 'Seafood',
+              stars_count: '4.1',
+              reviews_count: '420',
+              neighborhood: 'Downtown / Gaslamp',
+              phone_number: '(619) 232-1141',
+              price_range: '$30 and under',
+              dining_style: 'Casual Dining',
+              objectID: '99940',
+              _highlightResult: [Object]
+            }
         ]
       }
 
