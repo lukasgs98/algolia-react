@@ -1,12 +1,16 @@
-.top-container {
+.top-container,
+.middle-container {
     display: flex;
+    padding: 20px;
+}
+
+.top-container {
     flex-direction: column;
     align-items: center;
     background-color: #2897c5;
 }
 
 .middle-container {
-    display: flex;
     flex-direction: row;
     background-color: white;
 }
