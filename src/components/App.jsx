@@ -8,8 +8,13 @@ import runSearch from "../algoliasearch.js";
 
 function App() {
 
-
-
+    // USE STATE TO REMEMBER SEARCH QUERY
+    const [query, setQuery] = React.useState("");
+    function handleTyping(value) {
+        setQuery(value);
+        console.log(query);
+    };
+      
     // USE STATE TO REMEMBER SELECTED CUISINE
     const [selectedCuisines, setSelectedCuisines] = React.useState([]);
     function filterCuisine(value) { 
@@ -52,12 +57,12 @@ function App() {
     // USE STATE TO REMEMBER SEARCH RESULTS
     const [results, setResults] = React.useState(null);
 
-    // INITIALIZE SEARCH WITH ALL 5 STAR
+    // INITIALIZE SEARCH WITH ALL 5 STAR RESTAURANTS -- IF FUNCTION RUNS AGAIN DUE TO DEPENDENCY => FILL IN THE SELECTION
     React.useEffect(() => {
         let query = "";
-        let cuisineFilter = "";
-        let paymentOptionsFilter = "";
-        let ratingsFilter = 5;
+        let cuisineFilter = selectedCuisines.length != 0 ? selectedCuisines : "";
+        let paymentOptionsFilter = selectedPaymentOptions.lengt != 0 ? selectedPaymentOptions : "";
+        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : 5;
 
         runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter)
             .then((res) => {
@@ -69,9 +74,14 @@ function App() {
 
     if (results) console.log(results);
 
+    // RENDER PAGE
     return (<>
               <div className="top-container">
-                  <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
+                  <Searchbar 
+                      placeholder="Search for restaurants by name, cuisine or location"
+                      value={query}
+                      handleTyping={handleTyping}
+                  />
               </div>
               <div className="middle-container">
                   <Sidebar 
