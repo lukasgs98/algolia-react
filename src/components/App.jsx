@@ -46,7 +46,7 @@ function App() {
         const rating = value;
         setSelectedRatings(prevSelection  => {
             if (prevSelection.includes(rating)) {
-                return prevSelection.filter(item => item !== rating);
+                return [];
             } else {
                 return rating;
             }
