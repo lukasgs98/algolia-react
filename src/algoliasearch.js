@@ -1,6 +1,7 @@
 import { algoliasearch } from "algoliasearch";
 import algoliasearchHelper from "algoliasearch-helper";
 
+// ADD AUTHENTICATION
 const appID = "S7MEP37Z1R";
 const apiKey = "10d378365771fa4741c471a7971d359d";
 const indexName = "restaurants";
@@ -21,17 +22,18 @@ async function runSearch(query, cuisineFilter, ratingsFilter, paymentOptionsFilt
     .addDisjunctiveFacetRefinement("payment_options", paymentOptionsFilter)
     .addNumericRefinement("stars_count", "=", ratingsFilter);
 
-  // RETURN A PROMISE WITH THE RESULT
+  // RETURN A PROMISE WITH THE RESULT OF THE SEARCH
   return new Promise((resolve, reject) => {
+    
     // DEFINE FUNCTION TO BE CALLED WHEN helper.search() RETURNS A RESULT
     function onResult(event) {
       helper.removeListener("result", onResult);
-      resolve(event.results); // Resolving with the results
+      resolve(event.results); // RESOLVE PROMISE WITH THE RESULT
     }
 
     // ADD EVENT LISTENERS TO THE HELPER
-    helper.once("result", onResult);
-    helper.once("error", reject); // Reject the promise on error
+    helper.once("result", onResult); // CALL on_result() WHEN SUCCESSFUL
+    helper.once("error", reject); // REJECT PROMISE ON ERROR
 
     // TRIGGER SEARCH
     helper.search();

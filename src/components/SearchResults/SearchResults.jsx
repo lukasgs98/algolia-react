@@ -5,21 +5,18 @@ import ShowMoreButton from "./ShowMoreButton/ShowMoreButton";
 import "./SearchResults.css"
 
 function SearchResults(props) {
-    // SEPARATE SEARCH METADATA AND HITS //
-    const metadata = props.results.metadata;
-    const hits = props.results.hits;
     
     // CREATE FUNCTION TO RENDER CARDS //
     function createCard(hit) {
         return (
             <Card 
-            name={hit.name}
-            photo={hit.image_url}
-            numberStars={hit.stars_count}
-            numberReviews={hit.reviews_count}
-            cuisine={hit.food_type}
-            area={hit.area}
-            priceRange={hit.price_range}
+            name="Name"
+            photo="Image"
+            numberStars="Stars"
+            numberReviews="Reviews"
+            cuisine="Food Type"
+            area="Area"
+            priceRange="Price Range"
         />
         )
     };
@@ -28,12 +25,20 @@ function SearchResults(props) {
         <div className="search-results">
             {/* RENDER SEARCH META DATA */}
             <SearchMetaData 
-                numberHits={metadata.numberOfHits} 
-                searchSpeed={metadata.searchTimeSeconds}
+                numberHits="500"
+                searchSpeed="0.05"
             />
 
             {/* LOOP THROUGH HITS TO CREATE CARDS */}
-            {hits.map(createCard)}
+            <Card 
+            name="Name"
+            photo="Image"
+            numberStars="Stars"
+            numberReviews="Reviews"
+            cuisine="Food Type"
+            area="Area"
+            priceRange="Price Range"
+            />
         </div>
     );
 }
