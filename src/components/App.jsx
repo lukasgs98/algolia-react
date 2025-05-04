@@ -4,29 +4,14 @@ import Sidebar from "./Sidebar/Sidebar";
 import SearchResults from "./SearchResults/SearchResults";
 import "./App.css"
 
-import { algoliasearch } from "algoliasearch";
-import algoliasearchHelper from 'algoliasearch-helper';
+import runSearch from "../algoliasearch.js";
 
 function App() {
-
-    const appID = "S7MEP37Z1R";
-    const apiKey = "10d378365771fa4741c471a7971d359d";
-    const indexName = "test-index";
-    
-    const client = algoliasearch(appID, apiKey);
-    const helper = algoliasearchHelper(client, indexName, {
-      facets: ["food_type", "stars_count", "payment_options"]
-    });
-
-    helper.on('result', function (event) {
-      console.log(event.results);
-    });
-
     const results = {
         "metadata": {
           "query": "restaurants near me",
           "numberOfHits": 3,
-          "searchTimeSeconds": 0.45
+          "searchTimeSeconds": 0.05
         },
         "hits": [
             {
