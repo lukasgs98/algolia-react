@@ -8,7 +8,10 @@ import runSearch from "../algoliasearch.js";
 
 function App() {
 
+    // USE STATE TO REMEMBER SEARCH RESULTS
     const [results, setResults] = React.useState(null);
+
+    // INITIALIZE SEARCH WITH DUMMY QUERY
     React.useEffect(() => {
         let query = "San Diego";
         let cuisineFilter = "Italian";
@@ -19,11 +22,11 @@ function App() {
             .then((res) => {
                 setResults(res);
             }).catch((err) => {
-              console.error("Search error:", err);
+                console.error("Search error:", err);
             })
       }, []);
-    
-    console.log(results);
+
+    if (results) console.log(results);
 
     // USE STATE TO REMEMBER SELECTED CUISINE
     const [selectedCuisines, setSelectedCuisines] = React.useState([]);
@@ -74,7 +77,7 @@ function App() {
                       handleRatingsFilter={filterRatings}
                       handlePaymentOptionsFilter={filterPaymentOptions} 
                   />
-                  <SearchResults />
+                  <SearchResults results={results}/>
               </div>
             </>)
 }
