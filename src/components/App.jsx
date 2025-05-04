@@ -11,14 +11,14 @@ function App() {
     // USE STATE TO REMEMBER SEARCH RESULTS
     const [results, setResults] = React.useState(null);
 
-    // INITIALIZE SEARCH WITH DUMMY QUERY
+    // INITIALIZE SEARCH WITH ALL 5 STAR RESTAURANTS
     React.useEffect(() => {
-        let query = "San Diego";
-        let cuisineFilter = "Italian";
+        let query = "";
+        let cuisineFilter = "";
+        let paymentOptionsFilter = "";
         let ratingsFilter = 5;
-        let paymentOptions = "AMEX";
 
-        runSearch(query, cuisineFilter, ratingsFilter, paymentOptions)
+        runSearch(query, cuisineFilter, ratingsFilter, paymentOptionsFilter)
             .then((res) => {
                 setResults(res);
             }).catch((err) => {

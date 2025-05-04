@@ -6,7 +6,6 @@ import "./SearchResults.css"
 
 function SearchResults(props) {
 
-    // CREATE FUNCTION TO RENDER CARDS //
     function createCard(hit) {
         return (
             <Card 
@@ -21,7 +20,6 @@ function SearchResults(props) {
         )
     };
     
-    // CHECK IF RESULTS != NULL AND THERE ARE HITS
     if (props.results && props.results.hits.length != 0) {
         return (
             <div className="search-results">
@@ -31,6 +29,6 @@ function SearchResults(props) {
         );
     }
     return <div className="search-results">Oops, no results found!</div>;
-}
+};
 
 export default SearchResults;

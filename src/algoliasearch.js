@@ -10,7 +10,7 @@ const indexName = "restaurants";
 const client = algoliasearch(appID, apiKey);
 
 // DECLARE ASYNC SEARCH FUNCTION
-async function runSearch(query, cuisineFilter, ratingsFilter, paymentOptionsFilter) {
+async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter) {
   // INITIALIZE algoliasearch-helper WITH CORRECT FACETS
   const helper = algoliasearchHelper(client, indexName, {
     disjunctiveFacets: ["food_type", "payment_options"]
