@@ -7,9 +7,18 @@ import "./Sidebar.css";
 function Sidebar(props) {
     return (
         <div className="sidebar">
-            <CuisineFilter handleCuisineFilter={props.handleCuisineFilter} />
-            <RatingFilter handleRatingsFilter={props.handleRatingsFilter} />
-            <PaymentOptionsFilter handlePaymentOptionsFilter={props.handlePaymentOptionsFilter} />
+            <CuisineFilter 
+                selectedCuisines={props.selectedCuisines} 
+                handleCuisineFilter={props.handleCuisineFilter} 
+            />
+            <RatingFilter 
+                selectedRatings={props.selectedRatings} 
+                handleRatingsFilter={props.handleRatingsFilter} 
+            />
+            <PaymentOptionsFilter 
+                selectedPaymentOptions={props.selectedPaymentOptions} 
+                handlePaymentOptionsFilter={props.handlePaymentOptionsFilter} 
+            />
         </div>
     );
 };

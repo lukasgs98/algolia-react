@@ -83,7 +83,10 @@ function App() {
                   <Sidebar 
                       handleCuisineFilter={filterCuisine} 
                       handleRatingsFilter={filterRatings}
-                      handlePaymentOptionsFilter={filterPaymentOptions} 
+                      handlePaymentOptionsFilter={filterPaymentOptions}
+                      selectedCuisines={selectedCuisines}
+                      selectedRatings={selectedRatings}
+                      selectedPaymentOptions={selectedPaymentOptions} 
                   />
                   <SearchResults results={results}/>
               </div>

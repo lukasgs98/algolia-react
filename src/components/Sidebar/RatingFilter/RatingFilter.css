@@ -18,6 +18,19 @@
     width: 50%;
 }
 
-ul {
-    list-style-type: none;
+.rating-filter-list li {
+    display: flex;
+    align-items: center;
 }
+
+.rating-filter-list li img:hover {
+    border-bottom: solid 1px #1c688e;
+}
+
+.rating-filter-list .selected:after {
+    content: '✔';
+    margin-left: 8px;
+    padding: 2px;
+    color: #1c688e;
+    font-weight: bold;
+  }

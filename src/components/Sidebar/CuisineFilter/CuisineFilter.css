@@ -17,3 +17,18 @@
     padding: 0px;
 }
 
+.cuisine-filter-list li {
+    width: 100px;
+}
+
+.cuisine-filter-list li:hover {
+    color: #1c688e;
+    font-weight: bold;
+}
+
+.selected::after {
+    content: '✔';
+    margin-left: 8px;
+    color: #1c688e;
+    font-weight: bold;
+  }
