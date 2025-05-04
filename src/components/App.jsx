@@ -7,12 +7,12 @@ import "./App.css"
 import runSearch from "../algoliasearch.js";
 
 function App() {
-  runSearch("San Diego").then(searchResults => {
-    console.log("Search Results:", searchResults);
-  }).catch(error => {
-    console.error("Error with search:", error);
-  });
-    
+    runSearch("San Diego", "Italian", 5, "AMEX").then(searchResults => {
+      console.log("Search Results:", searchResults);
+      }).catch(error => {
+      console.error("Error with search:", error);
+      });
+      
     const results = {
         "metadata": {
           "query": "restaurants near me",

@@ -9,14 +9,17 @@ const indexName = "restaurants";
 const client = algoliasearch(appID, apiKey);
 
 // DECLARE ASYNC SEARCH FUNCTION
-async function runSearch(query) {
+async function runSearch(query, cuisineFilter, ratingsFilter, paymentOptionsFilter) {
   // INITIALIZE algoliasearch-helper WITH CORRECT FACETS
   const helper = algoliasearchHelper(client, indexName, {
-    disjunctiveFacets: ["food_type", "stars_count", "payment_options"]
+    disjunctiveFacets: ["food_type", "payment_options"]
   });
 
   // MODIFY THE SEARCH FOR A QUICK START
-  helper.setQuery(query).addDisjunctiveFacetRefinement("food_type", "Italian");
+  helper.setQuery(query)
+    .addDisjunctiveFacetRefinement("food_type", cuisineFilter)
+    .addDisjunctiveFacetRefinement("payment_options", paymentOptionsFilter)
+    .addNumericRefinement("stars_count", "=", ratingsFilter);
 
   // RETURN A PROMISE WITH THE RESULT
   return new Promise((resolve, reject) => {
