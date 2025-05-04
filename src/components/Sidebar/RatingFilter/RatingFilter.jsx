@@ -2,7 +2,7 @@ import React from "react";
 import "./RatingFilter.css"
 
 import ListItem from "../ListItem/ListItem";
-import ReviewStarsImage from "../../SearchResults/Card/ReviewStarsImage/ReviewStarsImage";
+import ReviewStarsImage from "../../SearchResults/ResultsList/Card/ReviewStarsImage/ReviewStarsImage";
 
 function RatingFilter(props) {
     return (

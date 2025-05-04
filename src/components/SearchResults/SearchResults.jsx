@@ -1,6 +1,5 @@
 import React from "react";
 import SearchMetaData from "./SearchMetaData/SearchMetaData";
-import Card from "./Card/Card";
 import ResultsList from "./ResultsList/ResultsList";
 import "./SearchResults.css"
 

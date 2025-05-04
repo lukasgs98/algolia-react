@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "../Card/Card";
+import Card from "./Card/Card";
+import "./ResultsList.css";
 
 
 function ResultsList(props) {
@@ -25,12 +26,12 @@ function ResultsList(props) {
     };
     
     return (
-        <div>
-            <ul>
+        <div className="results-list">
+            <ul className="results-list-ul">
                 {props.hits.slice(0, visibleCount).map(createCard)}
             </ul>
             {visibleCount < props.hits.length && (
-                <button onClick={showMore}>Show More</button>
+                <button className="show-more-button" onClick={showMore}>Show More</button>
             )}
         </div>
     );
