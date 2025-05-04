@@ -7,7 +7,6 @@ import "./App.css"
 import runSearch from "../algoliasearch.js";
 
 function App() {
-
     // USE STATE TO REMEMBER SEARCH QUERY
     const [query, setQuery] = React.useState("");
     function handleTyping(value) {
