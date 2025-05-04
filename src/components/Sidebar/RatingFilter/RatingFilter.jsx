@@ -8,7 +8,7 @@ function RatingFilter(props) {
     return (
         <div className="rating-filter">
             <div className="cuisine-filter-title">Rating</div>
-            <div className="rating-filter-list">
+            <ul className="rating-filter-list">
                 <ListItem 
                     key="0" 
                     value="0"
@@ -45,7 +45,7 @@ function RatingFilter(props) {
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="5" />}    
                 />
-            </div>
+            </ul>
         </div>
     );
 };

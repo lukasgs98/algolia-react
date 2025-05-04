@@ -6,6 +6,10 @@ body {
     background-color: #dddddd;
 }
 
+ul, ol {
+    list-style-type: none;
+}
+
 #root {
     display: flex;
     flex-direction: column;
