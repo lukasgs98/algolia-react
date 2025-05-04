@@ -12,7 +12,6 @@ function App() {
     const [query, setQuery] = React.useState("");
     function handleTyping(value) {
         setQuery(value);
-        console.log(query);
     };
       
     // USE STATE TO REMEMBER SELECTED CUISINE
@@ -57,12 +56,11 @@ function App() {
     // USE STATE TO REMEMBER SEARCH RESULTS
     const [results, setResults] = React.useState(null);
 
-    // INITIALIZE SEARCH WITH ALL 5 STAR RESTAURANTS -- IF FUNCTION RUNS AGAIN DUE TO DEPENDENCY => FILL IN THE SELECTION
+    // RUN SEARCH WHEN OTHER STATES CHANGE
     React.useEffect(() => {
-        let query = "";
-        let cuisineFilter = selectedCuisines.length != 0 ? selectedCuisines : "";
-        let paymentOptionsFilter = selectedPaymentOptions.lengt != 0 ? selectedPaymentOptions : "";
-        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : 5;
+        let cuisineFilter = selectedCuisines.length != 0 ? selectedCuisines : [];
+        let paymentOptionsFilter = selectedPaymentOptions.length != 0 ? selectedPaymentOptions : [];
+        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : 0;
 
         runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter)
             .then((res) => {
@@ -70,9 +68,7 @@ function App() {
             }).catch((err) => {
                 console.error("Search error:", err);
             })
-      }, [selectedCuisines, selectedPaymentOptions, selectedRatings]);
-
-    if (results) console.log(results);
+      }, [query, selectedCuisines, selectedPaymentOptions, selectedRatings]);
 
     // RENDER PAGE
     return (<>

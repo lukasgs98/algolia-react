@@ -16,11 +16,16 @@ async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilt
     disjunctiveFacets: ["food_type", "payment_options"]
   });
 
-  // MODIFY THE SEARCH FOR A QUICK START
-  helper.setQuery(query)
-    .addDisjunctiveFacetRefinement("food_type", cuisineFilter)
-    .addDisjunctiveFacetRefinement("payment_options", paymentOptionsFilter)
-    .addNumericRefinement("stars_count", "=", ratingsFilter);
+  // MODIFY THE SEARCH WITH ARGUMENTS
+  helper.setQuery(query);
+  
+  cuisineFilter.forEach(element => {
+    helper.addDisjunctiveFacetRefinement("food_type", element);
+  });
+
+  paymentOptionsFilter.forEach(element => {
+    helper.addDisjunctiveFacetRefinement("payment_options", element);
+  });
 
   // RETURN A PROMISE WITH THE RESULT OF THE SEARCH
   return new Promise((resolve, reject) => {
@@ -28,6 +33,7 @@ async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilt
     // DEFINE FUNCTION TO BE CALLED WHEN helper.search() RETURNS A RESULT
     function onResult(event) {
       helper.removeListener("result", onResult);
+      console.log(event.results);
       resolve(event.results); // RESOLVE PROMISE WITH THE RESULT
     }
 
