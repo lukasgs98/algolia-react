@@ -4,10 +4,10 @@ import RatingFilter from "./RatingFilter/RatingFilter";
 import PaymentOptionsFilter from "./PaymentOptionsFilter/PaymentOptionsFilter";
 import "./Sidebar.css";
 
-function Sidebar() {
+function Sidebar(props) {
     return (
         <div className="sidebar">
-            <CuisineFilter />
+            <CuisineFilter handleCuisineFilter={props.handleCuisineFilter} />
             <RatingFilter />
             <PaymentOptionsFilter />
         </div>

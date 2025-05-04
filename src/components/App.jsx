@@ -65,13 +65,27 @@ function App() {
         ]
       }
 
+    const [selectedCuisines, setSelectedCuisines] = React.useState([]);
+    function filterCuisine(event) {
+            
+        const cuisine = event.target.textContent;
+        setSelectedCuisines(prevSelection => {
+            if (prevSelection.includes(cuisine)) {
+                return prevSelection.filter(item => item !== cuisine);
+            } else {
+                return [...prevSelection, cuisine];
+            }
+        });
+        console.log(selectedCuisines);
+    };
+
     return (
         <>
             <div className="top-container">
                 <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
             </div>
             <div className="middle-container">
-                <Sidebar />
+                <Sidebar handleCuisineFilter={filterCuisine} />
                 <SearchResults results={results} />
             </div>
         </>
