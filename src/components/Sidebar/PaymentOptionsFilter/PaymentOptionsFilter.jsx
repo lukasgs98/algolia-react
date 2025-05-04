@@ -12,7 +12,7 @@ function PaymentOptionsFilter(props) {
                     value="AMEX"
                     className={props.selectedPaymentOptions.includes("AMEX") ? "selected" : null}
                     onClick={props.handlePaymentOptionsFilter} 
-                    textContent="Amex/American Express" 
+                    textContent="American Express" 
                 />
                 <ListItem 
                     id="1" 

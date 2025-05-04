@@ -48,7 +48,7 @@ function App() {
             if (prevSelection.includes(rating)) {
                 return prevSelection.filter(item => item !== rating);
             } else {
-                return [...prevSelection, rating];
+                return rating;
             }
         });
     };
@@ -60,7 +60,7 @@ function App() {
     React.useEffect(() => {
         let cuisineFilter = selectedCuisines.length != 0 ? selectedCuisines : [];
         let paymentOptionsFilter = selectedPaymentOptions.length != 0 ? selectedPaymentOptions : [];
-        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : 0;
+        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : [];
 
         runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter)
             .then((res) => {

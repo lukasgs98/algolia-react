@@ -17,7 +17,7 @@ async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilt
   });
 
   // MODIFY THE SEARCH WITH ARGUMENTS
-  helper.setQuery(query);
+  helper.setQuery(query).addNumericRefinement("stars_count", ">=", ratingsFilter);
   
   cuisineFilter.forEach(element => {
     helper.addDisjunctiveFacetRefinement("food_type", element);
