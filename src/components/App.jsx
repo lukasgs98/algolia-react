@@ -90,6 +90,19 @@ function App() {
         });
         console.log(selectedRatings);
     };
+    
+    const [selectedPaymentOptions, setSelectedPaymentOptions] = React.useState([]);
+    function filterPaymentOptions(value) {
+        const paymentOption = value;
+        setSelectedPaymentOptions(prevSelection  => {
+            if (prevSelection.includes(paymentOption)) {
+                return prevSelection.filter(item => item !== paymentOption);
+            } else {
+                return [...prevSelection, paymentOption];
+            }
+        });
+        console.log(selectedPaymentOptions);
+    };
 
     return (
         <>
@@ -97,7 +110,11 @@ function App() {
                 <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
             </div>
             <div className="middle-container">
-                <Sidebar handleCuisineFilter={filterCuisine} handleRatingsFilter={filterRatings} />
+                <Sidebar 
+                    handleCuisineFilter={filterCuisine} 
+                    handleRatingsFilter={filterRatings}
+                    handlePaymentOptionsFilter={filterPaymentOptions} 
+                />
                 <SearchResults results={results} />
             </div>
         </>
