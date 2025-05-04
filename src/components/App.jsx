@@ -4,7 +4,24 @@ import Sidebar from "./Sidebar/Sidebar";
 import SearchResults from "./SearchResults/SearchResults";
 import "./App.css"
 
+import { algoliasearch } from "algoliasearch";
+import algoliasearchHelper from 'algoliasearch-helper';
+
 function App() {
+
+    const appID = "S7MEP37Z1R";
+    const apiKey = "10d378365771fa4741c471a7971d359d";
+    const indexName = "test-index";
+    
+    const client = algoliasearch(appID, apiKey);
+    const helper = algoliasearchHelper(client, indexName, {
+      facets: ["food_type", "stars_count", "payment_options"]
+    });
+
+    helper.on('result', function (event) {
+      console.log(event.results);
+    });
+
     const results = {
         "metadata": {
           "query": "restaurants near me",
@@ -65,6 +82,7 @@ function App() {
         ]
       }
 
+    // USE STATE TO REMEMBER SELECTED CUISINE
     const [selectedCuisines, setSelectedCuisines] = React.useState([]);
     function filterCuisine(value) { 
         const cuisine = value;
@@ -75,9 +93,9 @@ function App() {
                 return [...prevSelection, cuisine];
             }
         });
-        console.log(selectedCuisines);
     };
     
+    // USE STATE TO REMEMBER SELECTED RATINGS
     const [selectedRatings, setSelectedRatings] = React.useState([]);
     function filterRatings(value) {
         const rating = value;
@@ -88,9 +106,9 @@ function App() {
                 return [...prevSelection, rating];
             }
         });
-        console.log(selectedRatings);
     };
     
+    // USE STATE TO REMEMBER SELECTED PAYMENTOPTIONS
     const [selectedPaymentOptions, setSelectedPaymentOptions] = React.useState([]);
     function filterPaymentOptions(value) {
         const paymentOption = value;
@@ -101,24 +119,21 @@ function App() {
                 return [...prevSelection, paymentOption];
             }
         });
-        console.log(selectedPaymentOptions);
     };
 
-    return (
-        <>
-            <div className="top-container">
-                <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
-            </div>
-            <div className="middle-container">
-                <Sidebar 
-                    handleCuisineFilter={filterCuisine} 
-                    handleRatingsFilter={filterRatings}
-                    handlePaymentOptionsFilter={filterPaymentOptions} 
-                />
-                <SearchResults results={results} />
-            </div>
-        </>
-    )
+    return (<>
+              <div className="top-container">
+                  <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
+              </div>
+              <div className="middle-container">
+                  <Sidebar 
+                      handleCuisineFilter={filterCuisine} 
+                      handleRatingsFilter={filterRatings}
+                      handlePaymentOptionsFilter={filterPaymentOptions} 
+                  />
+                  <SearchResults results={results} />
+              </div>
+            </>)
 }
 
 export default App;
