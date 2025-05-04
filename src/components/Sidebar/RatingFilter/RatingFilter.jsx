@@ -5,9 +5,9 @@ import ReviewStarsImage from "../../SearchResults/Card/ReviewStarsImage/ReviewSt
 
 function RatingFilter() {
     return (
-        <div class="rating-filter">
-            <div class="cuisine-filter-title">Rating</div>
-            <div class="rating-filter-list">
+        <div className="rating-filter">
+            <div className="cuisine-filter-title">Rating</div>
+            <div className="rating-filter-list">
                 <ReviewStarsImage numberStars="0" />
                 <ReviewStarsImage numberStars="1" />
                 <ReviewStarsImage numberStars="2" />

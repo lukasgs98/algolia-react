@@ -67,10 +67,10 @@ function App() {
 
     return (
         <>
-            <div class="top-container">
+            <div className="top-container">
                 <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
             </div>
-            <div class="middle-container">
+            <div className="middle-container">
                 <Sidebar />
                 <SearchResults results={results} />
             </div>

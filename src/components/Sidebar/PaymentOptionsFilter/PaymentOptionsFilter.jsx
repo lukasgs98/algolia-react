@@ -3,9 +3,9 @@ import "./PaymentOptionsFilter.css";
 
 function PaymentOptionsFilter() {
     return (
-        <div class="payment-options-filter">
-            <div class="payment-options-filter-title">Payment Options</div>
-            <div class="payment-options-filter-list">
+        <div className="payment-options-filter">
+            <div className="payment-options-filter-title">Payment Options</div>
+            <div className="payment-options-filter-list">
                 <div>Amex/American Express</div>
                 <div>Visa</div>
                 <div>Discover</div>

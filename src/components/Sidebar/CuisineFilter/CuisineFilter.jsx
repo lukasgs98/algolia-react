@@ -3,11 +3,11 @@ import "./CuisineFilter.css";
 
 function CuisineFilter() {
     return (
-        <div class="cuisine-filter">
-            <div class="cuisine-filter-title">Cuisine/Food Type</div>
-            <ul class="cuisine-filter-list">
-                <li>Cuisine A</li>
-                <li>Cuisine B</li>
+        <div className="cuisine-filter">
+            <div className="cuisine-filter-title">Cuisine/Food Type</div>
+            <ul className="cuisine-filter-list">
+                <li>Asian</li>
+                <li>Mexican</li>
             </ul>
         </div>
     );

@@ -25,7 +25,7 @@ function SearchResults(props) {
     };
     
     return (
-        <div class="search-results">
+        <div className="search-results">
             {/* RENDER SEARCH META DATA */}
             <SearchMetaData 
                 numberHits={metadata.numberOfHits} 

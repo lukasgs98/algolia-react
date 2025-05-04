@@ -6,7 +6,7 @@ import "./Sidebar.css";
 
 function Sidebar() {
     return (
-        <div class="sidebar">
+        <div className="sidebar">
             <CuisineFilter />
             <RatingFilter />
             <PaymentOptionsFilter />
