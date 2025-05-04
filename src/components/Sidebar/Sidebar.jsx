@@ -8,7 +8,7 @@ function Sidebar(props) {
     return (
         <div className="sidebar">
             <CuisineFilter handleCuisineFilter={props.handleCuisineFilter} />
-            <RatingFilter />
+            <RatingFilter handleRatingsFilter={props.handleRatingsFilter} />
             <PaymentOptionsFilter />
         </div>
     );

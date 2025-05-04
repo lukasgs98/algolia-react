@@ -1,5 +1,5 @@
 import React from "react";
-import ListItem from "./ListItem/ListItem";
+import ListItem from "../ListItem/ListItem";
 import "./CuisineFilter.css";
 
 function CuisineFilter(props) {
@@ -8,8 +8,8 @@ function CuisineFilter(props) {
         <div className="cuisine-filter">
             <div className="cuisine-filter-title">Cuisine/Food Type</div>
             <ul className="cuisine-filter-list">
-                <ListItem id="1" onClick={props.handleCuisineFilter} textContent="Asian" />
-                <ListItem id="2" onClick={props.handleCuisineFilter} textContent="Mexican" />
+                <ListItem id="1" value="Asian" onClick={props.handleCuisineFilter} textContent="Asian" />
+                <ListItem id="2" value="Mexican" onClick={props.handleCuisineFilter} textContent="Mexican" />
             </ul>
         </div>
     );

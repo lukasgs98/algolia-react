@@ -66,9 +66,8 @@ function App() {
       }
 
     const [selectedCuisines, setSelectedCuisines] = React.useState([]);
-    function filterCuisine(event) {
-            
-        const cuisine = event.target.textContent;
+    function filterCuisine(value) { 
+        const cuisine = value;
         setSelectedCuisines(prevSelection => {
             if (prevSelection.includes(cuisine)) {
                 return prevSelection.filter(item => item !== cuisine);
@@ -78,6 +77,19 @@ function App() {
         });
         console.log(selectedCuisines);
     };
+    
+    const [selectedRatings, setSelectedRatings] = React.useState([]);
+    function filterRatings(value) {
+        const rating = value;
+        setSelectedRatings(prevSelection  => {
+            if (prevSelection.includes(rating)) {
+                return prevSelection.filter(item => item !== rating);
+            } else {
+                return [...prevSelection, rating];
+            }
+        });
+        console.log(selectedRatings);
+    };
 
     return (
         <>
@@ -85,7 +97,7 @@ function App() {
                 <Searchbar placeholder="Search for restaurants by name, cuisine or location"/>
             </div>
             <div className="middle-container">
-                <Sidebar handleCuisineFilter={filterCuisine} />
+                <Sidebar handleCuisineFilter={filterCuisine} handleRatingsFilter={filterRatings} />
                 <SearchResults results={results} />
             </div>
         </>
