@@ -13,22 +13,35 @@
 }
 
 .cuisine-filter-list {
-    margin: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px 0px 10px;
     padding: 0px;
 }
 
 .cuisine-filter-list li {
-    width: 100px;
+    width: 100%;
+    padding: 2px;
 }
 
-.cuisine-filter-list li:hover {
-    color: #1c688e;
-    font-weight: bold;
+.cuisine-filter-list-item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.selected::after {
-    content: '✔';
-    margin-left: 8px;
+.cuisine-filter-list-item-content-count {
+    color: #b3b3b3;
+}
+
+.cuisine-filter-list-item:hover {
+    color: white;
+    background-color: #1c688e;
+    border: solid 1px #1c688e;
+    border-radius: 5px;
+}
+
+.selected {
     color: #1c688e;
     font-weight: bold;
   }

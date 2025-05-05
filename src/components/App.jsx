@@ -87,7 +87,7 @@ function App() {
               {results && facets && (
               <div className="middle-container">
                   <Sidebar 
-                      availableCuisines={facets}
+                      availableCuisines={facets.find(facet => facet.name === "food_type")?.data}
                       handleCuisineFilter={filterCuisine} 
                       handleRatingsFilter={filterRatings}
                       handlePaymentOptionsFilter={filterPaymentOptions}
