@@ -5,6 +5,7 @@ import "./SearchResults.css"
 
 function SearchResults(props) {
 
+    // RENDER SEARCH RESULTS IF THERE ARE ANY
     if (props.results && props.results.hits.length != 0) {
         return (
             <div className="search-results">
@@ -13,6 +14,8 @@ function SearchResults(props) {
             </div>
         );
     }
+    
+    // SHOW MESSAGE WHEN THERE ARE NO RESULTS
     return <div className="search-results">Oops, no results found!</div>;
 };
 
