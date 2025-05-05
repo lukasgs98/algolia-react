@@ -37,3 +37,10 @@
 .restaurant-description span {
     color: #b3b3b3;
 }
+
+@media (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+}
