@@ -24,16 +24,16 @@ function PaymentOptionsFilter(props) {
                 <ListItem 
                     id="2" 
                     value="Carte Blanche"
-                    className={props.selectedPaymentOptions.includes("Discover") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
+                    className={props.selectedPaymentOptions.includes("Carte Blanche") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
                     textContent="Carte Blanche" 
                 />
                 <ListItem 
                     id="3" 
                     value="Diners Club"
-                    className={props.selectedPaymentOptions.includes("Discover") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
+                    className={props.selectedPaymentOptions.includes("Diners Club") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
-                    textContent="Diners Club" 
+                    textContent="Diners Club"
                 />
                 <ListItem 
                     id="4" 
