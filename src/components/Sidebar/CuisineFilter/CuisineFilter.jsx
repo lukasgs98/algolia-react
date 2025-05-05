@@ -26,14 +26,24 @@ function CuisineFilter(props) {
         );
     };
 
+    const BATCH_SIZE = 8;
+        const [visibleCount, setVisibleCount] = React.useState(BATCH_SIZE);
+        
+        function showMore() {
+            setVisibleCount((prev) => Math.min(prev + BATCH_SIZE, availableCuisinesData.length));
+        };
+
     return (
         <div className="cuisine-filter">
             <div className="cuisine-filter-title">Cuisine/Food Type</div>
             <ul className="cuisine-filter-list">
-                {availableCuisinesData.map(([cuisine, count], index) => 
+                {availableCuisinesData.slice(0, visibleCount).map(([cuisine, count], index) => 
                     createListItem(cuisine, count, index)
                 )}
             </ul>
+            {visibleCount < availableCuisinesData.length && (
+                <div className="available-cuisines-list-show-more-button" onClick={showMore}>Show More</div>
+            )}
         </div>
     );
 };
