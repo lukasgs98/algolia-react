@@ -10,28 +10,35 @@ function PaymentOptionsFilter(props) {
                 <ListItem 
                     id="0" 
                     value="AMEX"
-                    className={props.selectedPaymentOptions.includes("AMEX") ? "selected" : null}
+                    className={props.selectedPaymentOptions.includes("AMEX") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
                     textContent="American Express" 
                 />
                 <ListItem 
                     id="1" 
                     value="Visa" 
-                    className={props.selectedPaymentOptions.includes("Visa") ? "selected" : null}
+                    className={props.selectedPaymentOptions.includes("Visa") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
                     textContent="Visa" 
                 />
                 <ListItem 
                     id="2" 
-                    value="Discover"
-                    className={props.selectedPaymentOptions.includes("Discover") ? "selected" : null}
+                    value="Carte Blanche"
+                    className={props.selectedPaymentOptions.includes("Discover") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
-                    textContent="Discover" 
+                    textContent="Carte Blanche" 
                 />
                 <ListItem 
                     id="3" 
+                    value="Diners Club"
+                    className={props.selectedPaymentOptions.includes("Discover") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
+                    onClick={props.handlePaymentOptionsFilter} 
+                    textContent="Diners Club" 
+                />
+                <ListItem 
+                    id="4" 
                     value="MasterCard"
-                    className={props.selectedPaymentOptions.includes("MasterCard") ? "selected" : null}
+                    className={props.selectedPaymentOptions.includes("MasterCard") ? "payment-options-filter-list-item selected" : "payment-options-filter-list-item"}
                     onClick={props.handlePaymentOptionsFilter} 
                     textContent="MasterCard" 
                 />

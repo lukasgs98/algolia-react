@@ -12,42 +12,42 @@ function RatingFilter(props) {
                 <ListItem 
                     id="0" 
                     value="0"
-                    className={props.selectedRatings.includes("0") ? "selected" : null}
+                    className={props.selectedRatings.includes("0") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="0" />}    
                 />
                 <ListItem 
                     id="1" 
                     value="1"
-                    className={props.selectedRatings.includes("1") ? "selected" : null}
+                    className={props.selectedRatings.includes("1") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="1" />}    
                 />
                 <ListItem 
                     id="2" 
                     value="2"
-                    className={props.selectedRatings.includes("2") ? "selected" : null}
+                    className={props.selectedRatings.includes("2") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="2" />}    
                 />
                 <ListItem 
                     id="3" 
                     value="3"
-                    className={props.selectedRatings.includes("3") ? "selected" : null}
+                    className={props.selectedRatings.includes("3") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="3" />}    
                 />
                 <ListItem 
                     id="4" 
                     value="4"
-                    className={props.selectedRatings.includes("4") ? "selected" : null}
+                    className={props.selectedRatings.includes("4") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="4" />}    
                 />
                 <ListItem 
                     id="5" 
                     value="5"
-                    className={props.selectedRatings.includes("5") ? "selected" : null}
+                    className={props.selectedRatings.includes("5") ? "rating-filter-list-item selected" : "rating-filter-list-item"}
                     onClick={props.handleRatingsFilter} 
                     textContent={<ReviewStarsImage numberStars="5" />}    
                 />

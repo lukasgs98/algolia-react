@@ -48,12 +48,12 @@
     color: white;
     background-color: #1c688e;
     border: solid 1px #1c688e;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
-.selected {
-    color: #1c688e;
+.cuisine-filter-list-item.selected {
     font-weight: bold;
+    font-style: italic;
   }
 
 .available-cuisines-list-show-more-button:hover {

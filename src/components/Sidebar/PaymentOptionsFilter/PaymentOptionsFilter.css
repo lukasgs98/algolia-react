@@ -17,15 +17,14 @@
     padding: 0px;
 }
 
-.payment-options-filter-list li:hover {
-    color: #1c688e;
-    font-weight: bold;
+.payment-options-filter-list-item:hover {
+    color: white;
+    background-color: #1c688e;
+    border: solid 1px #1c688e;
+    border-radius: 2px;
 }
 
-.rating-filter-list .selected:after {
-    content: '✔';
-    margin-left: 8px;
-    padding: 2px;
-    color: #1c688e;
+.payment-options-filter-list-item.selected {
     font-weight: bold;
+    font-style: italic;
   }
