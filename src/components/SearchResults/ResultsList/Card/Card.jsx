@@ -15,7 +15,7 @@ function Card(props) {
                     <span className="restaurant-reviews-stars-img">
                         <ReviewStarsImage numberStars={props.numberStars} />
                     </span>
-                    <span className="restaurant-reviews-number-reviews">({props.numberReviews}) reviews</span>
+                    <span className="restaurant-reviews-number-reviews">({props.numberReviews} reviews)</span>
                 </div>
                 <div className="restaurant-description">
                     <span className="restaurant-description-cuisine">{props.cuisine}</span> 
