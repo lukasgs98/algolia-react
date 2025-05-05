@@ -4,6 +4,10 @@
     gap: 20px;
 }
 
+.restaurant-name {
+    font-weight: bold;
+}
+
 .restaurant-reviews,
 .restaurant-description {
     display: flex;

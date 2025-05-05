@@ -10,4 +10,9 @@
 
 .show-more-button {
     align-self: center;
+    border: solid 1px #b3b3b3;
+    border-radius: 5px;
+    padding: 5px 40px;
+    color: #b3b3b3;
+    font-weight: bold;
 }

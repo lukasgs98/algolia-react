@@ -53,17 +53,24 @@ function App() {
     };
     
     // USE STATE TO REMEMBER SEARCH RESULTS
+    const [hasMounted, setHasMounted] = React.useState(false);
+    const [facets, setFacets] = React.useState([]);
     const [results, setResults] = React.useState(null);
 
     // RUN SEARCH WHEN OTHER STATES CHANGE
     React.useEffect(() => {
-        let cuisineFilter = selectedCuisines.length != 0 ? selectedCuisines : [];
-        let paymentOptionsFilter = selectedPaymentOptions.length != 0 ? selectedPaymentOptions : [];
-        let ratingsFilter = selectedRatings.length != 0 ? selectedRatings : [];
+        let cuisineFilter = hasMounted ? selectedCuisines : [];
+        let paymentOptionsFilter = hasMounted ? selectedPaymentOptions : [];
+        let ratingsFilter = hasMounted ? selectedRatings : [];
 
         runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter)
             .then((res) => {
                 setResults(res);
+                if (!hasMounted) {
+                    setFacets(res.disjunctiveFacets);
+                    setHasMounted(true);
+                    console.log(res.disjunctiveFacets);
+                }
             }).catch((err) => {
                 console.error("Search error:", err);
             })
