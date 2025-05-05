@@ -1,0 +1,100 @@
+Question 1: 
+"Hello,
+
+I'm new to search engines, and there are a lot of concepts I'm not educated on. 
+To make my onboarding smoother, it'd help if you could provide me with some definitions of the following concepts:
+- Records
+- Indexing
+I'm also struggling with understanding what types of metrics would be useful to include in the "Custom Ranking."
+
+Cheers, George"
+
+==> Answer:
+
+"Hi George,
+
+Nice to meet you and welcome to Algolia! I'll gladly help you clarify these concepts.
+
+- Records: A record is a single piece of data in your search index. You can think of it like a row in a table. 
+           For example, in an e-commerce store, one product would be one record. Records can also have attributes, which describe it. 
+           The same product could have attributes related to material and weight, for instance.
+
+- Indexing: This is the process of preparing and storing records in a way that makes them quickly searchable. 
+            When you index your data in Algolia, you’re uploading records and configuring them, so that your search engine can find
+            more relevant records, faster. For example, you could set the name, category, brand and description of a product as searchable,
+            so when a user types something into the searchbar, that information will be used to check for matching records.
+
+- Custom Ranking Metrics: These are attributes you choose to prioritize when Algolia sorts search results. For example, you could let Algolia
+                          rank results by sales or popularity, to show high-performing items further up, by ratings, price or any other metric.
+
+Let me know if you have any additional questions. Happy to jump on a call!
+
+All the best,
+Lukas"
+
+Question 2: 
+"Hello,
+
+Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design. 
+Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient.
+
+Regards, Matt"
+
+==> Answer: 
+
+"Hi Matt,
+
+Thank you for the honest feedback. It's always appreciated, even when it’s not positive.
+
+I understand how needing extra clicks for clearing or deleting indexes can slow you down, especially during rapid iteration. 
+
+While the recent dashboard redesign aimed to improve usability for broader use cases, your workflow is absolutely valid. I’ll be sure to share your input 
+with our product team. 
+
+In the meantime, you might find our API or the Algolia CLI more efficient for tasks like index clearing during development. I am linking the correct part of
+our documentation here for you:
+
+https://www.algolia.com/doc/guides/sending-and-managing-data/manage-indices-and-apps/manage-indices/how-to/delete-indices/#delete-indices-with-the-api
+
+Please let me know if you'd like guidance using either option!
+
+All the best,
+Lukas"
+
+Question 3: 
+"Hi,
+
+I'm looking to integrate Algolia in my website. Will this be a lot of development work for me? What's the high level process look like?
+
+Regards, Leo"
+
+==> Answer:
+
+"Hi Leo,
+
+Nice to meet you! Integrating Algolia doesn’t require heavy development, especially with our libraries and tools.
+The high-level process looks like this:
+
+1. Preparing your data: you'll need to format your records in JSON to push it to an index. More info can be found here: 
+https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/
+
+2. Pushing your data to an index: you can do so either via API or by uploading a file in the dashboard. If you go for the API
+approach, there are different clients available for the programming languages of your choice. If you want to dive deeper into the
+different options, this is a good source: https://www.algolia.com/doc/guides/sending-and-managing-data/send-and-update-your-data/ 
+
+3. Configure the index: you can set searchable attributes and attributes for filtering and ranking, to make searches most relevant
+for your use case.
+
+4. Implementing the search in your front-end: you can use the InstantSearch package (for JavaScript) or a frontend library to connect 
+the search to your UI. A guide and live demo of InstantSearch is available in our documentation: 
+https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/
+
+5. Testing and refining: once everything is set up, you'll likely want to monitor search performance and tweak settings as needed.
+
+If you’re using platforms like Shopify or WordPress, we also offer integrations to make it even easier.
+
+Let me know what tech stack you’re using and I’ll help you get some more tailored information! I am also attaching a link to our quick start guide here:
+https://www.algolia.com/doc/guides/getting-started/what-is-algolia/
+
+All the best,
+Lukas"
