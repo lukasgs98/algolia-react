@@ -31,7 +31,7 @@ function ResultsList(props) {
                 {props.hits.slice(0, visibleCount).map(createCard)}
             </ul>
             {visibleCount < props.hits.length && (
-                <div className="show-more-button" onClick={showMore}>Show More</div>
+                <div className="results-list-show-more-button" onClick={showMore}>Show More</div>
             )}
         </div>
     );

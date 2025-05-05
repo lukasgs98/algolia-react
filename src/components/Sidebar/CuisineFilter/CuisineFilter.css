@@ -34,6 +34,16 @@
     color: #b3b3b3;
 }
 
+.available-cuisines-list-show-more-button {
+    align-self: center;
+    border: solid 0.5px #b3b3b3;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #b3b3b3;
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
 .cuisine-filter-list-item:hover {
     color: white;
     background-color: #1c688e;
@@ -45,3 +55,8 @@
     color: #1c688e;
     font-weight: bold;
   }
+
+.available-cuisines-list-show-more-button:hover {
+    background-color: #1c688e;
+    color: white;
+}
