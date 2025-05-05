@@ -2,6 +2,7 @@
 .payment-options-filter-list {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .payment-options-filter {

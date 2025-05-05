@@ -13,13 +13,11 @@
 }
 
 .cuisine-filter-list {
-    display: flex;
-    flex-direction: column;
     margin: 0px 50px 0px 10px;
     padding: 0px;
 }
 
-.cuisine-filter-list li {
+.cuisine-filter-list-item {
     width: 100%;
     padding: 2px;
 }

@@ -1,6 +1,7 @@
 .search-results {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 75%;
     gap: 10px;
 }
