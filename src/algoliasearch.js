@@ -36,7 +36,6 @@ async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilt
     // DEFINE FUNCTION TO BE CALLED WHEN helper.search() RETURNS A RESULT
     function onResult(event) {
       helper.removeListener("result", onResult);
-      console.log(event.results);
       resolve(event.results); // RESOLVE PROMISE WITH THE RESULT
     }
 

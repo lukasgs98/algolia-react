@@ -8,6 +8,7 @@ function Sidebar(props) {
     return (
         <div className="sidebar">
             <CuisineFilter 
+                availableCuisines={props.availableCuisines}
                 selectedCuisines={props.selectedCuisines} 
                 handleCuisineFilter={props.handleCuisineFilter} 
             />

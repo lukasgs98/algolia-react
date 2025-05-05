@@ -3,7 +3,6 @@ import ListItem from "../ListItem/ListItem";
 import "./CuisineFilter.css";
 
 function CuisineFilter(props) {
-
     return (
         <div className="cuisine-filter">
             <div className="cuisine-filter-title">Cuisine/Food Type</div>
