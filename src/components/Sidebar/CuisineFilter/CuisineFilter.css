@@ -51,7 +51,7 @@
 
 .cuisine-filter-list-item.selected {
     font-weight: bold;
-    font-style: italic;
+    font-size: 1.10em;
   }
 
 .available-cuisines-list-show-more-button:hover {
