@@ -69,7 +69,7 @@ function App() {
                 if (!hasMounted) {
                     setFacets(res.disjunctiveFacets);
                     setHasMounted(true);
-                    console.log(res.disjunctiveFacets);
+                    console.log(res.disjunctiveFacets.find(facet => facet.name === "food_type")?.data);
                 }
             }).catch((err) => {
                 console.error("Search error:", err);
@@ -87,12 +87,14 @@ function App() {
               </div>
               <div className="middle-container">
                   <Sidebar 
+                      availableCuisines={facets.find(facet => facet.name === "food_type")?.data} 
                       handleCuisineFilter={filterCuisine} 
                       handleRatingsFilter={filterRatings}
                       handlePaymentOptionsFilter={filterPaymentOptions}
                       selectedCuisines={selectedCuisines}
                       selectedRatings={selectedRatings}
-                      selectedPaymentOptions={selectedPaymentOptions} 
+                      selectedPaymentOptions={selectedPaymentOptions}
+                      
                   />
                   <SearchResults results={results}/>
               </div>
