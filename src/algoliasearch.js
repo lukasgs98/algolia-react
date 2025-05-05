@@ -16,7 +16,7 @@ async function runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilt
   const helper = algoliasearchHelper(client, indexName, {
     disjunctiveFacets: ["food_type", "payment_options"],
     getRankingInfo: true,
-    aroundLatLngViaIP: true
+    aroundLatLngViaIP: true // LOCATE USER BY IP ADDRESS INSTEAD OF GEOLOCATION -- NOT AS ACCURATE, BUT NO FALLBACK NEEDED
   });
 
   // MODIFY THE SEARCH WITH ARGUMENTS

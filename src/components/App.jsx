@@ -53,19 +53,23 @@ function App() {
     };
     
     // USE STATE TO REMEMBER SEARCH RESULTS
-    const [hasMounted, setHasMounted] = React.useState(false);
-    const [facets, setFacets] = React.useState([]);
+    const [hasMounted, setHasMounted] = React.useState(false); // REMEMBER IF APP COMPONENT HAS MOUNTED BEFORE
+    const [facets, setFacets] = React.useState([]); // DECLARE STATE FOR AVAILABLE FACETS -- NEEDED FOR SIDEBAR CUISINE FILTER
     const [results, setResults] = React.useState(null);
 
     // RUN SEARCH WHEN OTHER STATES CHANGE
     React.useEffect(() => {
+        // IF APP HASN'T MOUNTED BEFORE, USE EMPTY ARRAYS FOR FACETS -- DISPLAYS ALL RECORDS BY DEFAULT
         let cuisineFilter = hasMounted ? selectedCuisines : [];
         let paymentOptionsFilter = hasMounted ? selectedPaymentOptions : [];
         let ratingsFilter = hasMounted ? selectedRatings : [];
 
+        // RUN THE SEARCH WITH OTHER STATES AS PARAMETERS
         runSearch(query, cuisineFilter, paymentOptionsFilter, ratingsFilter)
             .then((res) => {
+                // SET RESULTS STATE TO RESULT OF SEARCH
                 setResults(res);
+                // IF APP HASN'T MOUNTED BEFORE, SET FACETS STATE WITH DISCJUNTIVE FACETS
                 if (!hasMounted) {
                     setFacets(res.disjunctiveFacets);
                     setHasMounted(true);
@@ -73,7 +77,7 @@ function App() {
             }).catch((err) => {
                 console.error("Search error:", err);
             })
-      }, [query, selectedCuisines, selectedPaymentOptions, selectedRatings]);
+      }, [query, selectedCuisines, selectedPaymentOptions, selectedRatings]); // MAKE HOOK DEPENDENT ON OTHER STATES
 
     // RENDER PAGE
     return (<>
@@ -84,6 +88,8 @@ function App() {
                       handleTyping={handleTyping}
                   />
               </div>
+              
+              {/* RENDER ONLY IF RESULTS AND FACETS STATE HAVE DATA */}
               {results && facets && (
               <div className="middle-container">
                   <Sidebar 
