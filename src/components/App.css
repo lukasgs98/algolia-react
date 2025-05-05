@@ -16,11 +16,33 @@
     background-color: white;
 }
 
-@media (max-width: 1000px) {
-    .middle-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+
+@media (max-width: 1300px) {
+    body {
+        font-size: 0.90rem;
     }
 }
 
+@media (max-width: 1200px) {
+    body {
+        font-size: 0.80rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+        font-size: 0.70rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 0.50rem;
+    }
+
+    .middle-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
