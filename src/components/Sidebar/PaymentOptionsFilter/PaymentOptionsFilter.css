@@ -18,14 +18,19 @@
     padding: 0px;
 }
 
+.payment-options-filter-list-item {
+    padding: 5px;
+    width: 50%;
+}
+
 .payment-options-filter-list-item:hover {
     color: white;
     background-color: #1c688e;
     border: solid 1px #1c688e;
-    border-radius: 2px;
 }
 
 .payment-options-filter-list-item.selected {
-    font-weight: bold;
-    font-size: 1.10em;
+    color: white;
+    background-color: #1c688e;
+    border: solid 1px #1c688e;
   }

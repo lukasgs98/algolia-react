@@ -19,7 +19,7 @@
 
 .cuisine-filter-list-item {
     width: 100%;
-    padding: 2px;
+    padding: 5px;
 }
 
 .cuisine-filter-list-item-content {
@@ -33,7 +33,7 @@
 }
 
 .available-cuisines-list-show-more-button {
-    align-self: center;
+    align-self: start;
     border: solid 0.5px #b3b3b3;
     border-radius: 5px;
     padding: 5px 10px;
@@ -46,12 +46,12 @@
     color: white;
     background-color: #1c688e;
     border: solid 1px #1c688e;
-    border-radius: 2px;
 }
 
 .cuisine-filter-list-item.selected {
-    font-weight: bold;
-    font-size: 1.10em;
+    color: white;
+    background-color: #1c688e;
+    border: solid 1px #1c688e;
   }
 
 .available-cuisines-list-show-more-button:hover {
